@@ -9,11 +9,12 @@ is_64bit = strcmp(computer,'MACI64') || strcmp(computer,'GLNXA64') || strcmp(com
 %% -------------------------------------------------------------------  
 %% the configuration of compiler  
 % You need to modify this configuration according to your own path of OpenCV  
-% ×¢Òâ£ºÄãµÄVS OpenCVÆ½Ì¨Ò»¶¨ÒªÆ¥ÅäMatlab 64Î»µÄ£¡  
-out_dir='./';% µ±Ç°Ä¿Â¼  
+% æ³¨æ„ï¼šä½ çš„VS OpenCVå¹³å°ä¸€å®šè¦åŒ¹é…Matlab 64ä½çš„ï¼  
+out_dir='./';% å½“å‰ç›®å½•  
 CPPFLAGS = ' -g -IE:\opencv3_4_2\opencv\build\include -IE:\opencv3_4_2\opencv\build\include\opencv -IE:\opencv3_4_2\opencv\build\include\opencv2'; % your OpenCV "include" path  
-LDFLAGS = ' -LE:\opencv3_4_2\opencv\build\x64\vc14\lib'; % ÓÃOpenCV release°æ±¾µÄ"lib"Â·¾¶  
-LIBS = ' -lopencv_world342'; % release°æ±¾µÄlib£¬ÎŞºó×º£¬ÏµÍ³»á×Ô¶¯¼ÓÉÏÈ¥  
+LDFLAGS = ' -LE:\opencv3_4_2\opencv\build\x64\vc14\lib'; % ç”¨OpenCV releaseç‰ˆæœ¬çš„"lib"è·¯å¾„  
+LIBS = ' -lopencv_world342'; % releaseç‰ˆæœ¬çš„libï¼Œæ— åç¼€ï¼Œç³»ç»Ÿä¼šè‡ªåŠ¨åŠ ä¸Šå»  
+% mingw64ç¼–è¯‘å™¨å‚è€ƒï¼šhttps://ww2.mathworks.cn/matlabcentral/answers/1807390-how-can-i-compile-and-link-static-libraries-from-the-mingw64-compiler-on-a-windows-system-using-the
 if is_64bit  
     CPPFLAGS = [CPPFLAGS ' -largeArrayDims'];  
 end  
